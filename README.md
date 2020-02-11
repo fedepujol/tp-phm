@@ -28,16 +28,16 @@ Desarrollar una aplicación que trabaja en el depósito de mercaderías de una d
 [Enunciado completo (Primera Parte)](https://docs.google.com/document/d/1wvYK3qr9QBfxUWm_KMwjXeXo7IJabMNgpyDE1XvWKI4/edit)
 
 ### Diagrama de Clases (Dominio):
-![dominio](https://github.com/phm-unsam/tp-2018-rap/blob/master/resources/diagrama.png)
+![dominio](https://github.com/fedepujol/tp-phm/blob/master/resources/diagrama.png)
 
 ### Modelo Entidad Relacion:
-![der](https://github.com/phm-unsam/tp-2018-rap/blob/master/resources/der.png)
+![der](https://github.com/fedepujol/tp-phm/blob/master/resources/der.png)
 
 [Enunciado Segunda Parte](https://docs.google.com/document/d/1mlfia91BOTgXp6hNTaQJgy33wwIirMd-6zSSJEY4KXE/edit)
 
 ### Modelo Neo4J:
 
-![neo4j](https://github.com/phm-unsam/tp-2018-rap/blob/master/resources/modeloNeo4j.png)
+![neo4j](https://github.com/fedepujol/tp-phm/blob/master/resources/modeloNeo4j.png)
 
 #### Nodos
 - __Producto/ProductoCompuesto:__
@@ -61,6 +61,3 @@ Desarrollar una aplicación que trabaja en el depósito de mercaderías de una d
     Conecta los Proveedores con las Ordenes de Compra.
    
 [Enunciado Tercera Parte](https://docs.google.com/document/d/13eMD374oPeQgkyYCKsa6Ad-Qx_SXmh1miE8Cv19R8Ig/edit)
-
-### TO-DO:
-- [ ] Persistencia MongoDB
