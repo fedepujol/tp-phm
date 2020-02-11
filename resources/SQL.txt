@@ -1,0 +1,25 @@
+-- Punto 1)
+CREATE VIEW 
+vista_productos_dabajo_minimo AS 
+select descripcion, (actual - minimo) as diferencia_actual_minimo 
+from autopartes.producto 
+inner join autopartes.stock on producto.stock_id_stock = stock.id_stock 
+where actual < minimo order by diferencia_actual_minimo asc;
+
+-- Punto 3)
+CREATE VIEW 
+vista_oc_2omas_lineas AS 
+select id_ordenDeCompra, fecha, proveedor_id_proveedor, 
+count(ordendecompra_item.productos_id_item) as cantidad_lineas 
+from autopartes.ordendecompra 
+inner join autopartes.ordendecompra_item 
+on (ordendecompra.id_ordenDeCompra = ordendecompra_item.OrdenDeCompra_id_ordenDeCompra) 
+group by id_ordenDeCompra having cantidad_lineas > 1;
+
+
+-- Punto 4) (REVISAR)
+ALTER TABLE autopartes.stock
+ADD CONSTRAINT CHK_stocksMayorA0 CHECK (actual>0 AND maximo>0 AND minimo>0 );
+
+ALTER TABLE autopartes.stock
+ADD CHECK (stock.actual>0);
